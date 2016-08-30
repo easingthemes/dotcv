@@ -54,7 +54,7 @@ HINT: Click logo to reset initial state.
 # Steps:
 
 -----------------------------------
-# 1. Initial setup:
+1. Initial setup:
 -----------------------------------
 
 ## Directory structure
