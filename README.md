@@ -1,4 +1,5 @@
 # Getting Started
+-----------------------------------
 
 This project is written in ES6 and SASS. 
 Source data is in `src` directory.
@@ -16,6 +17,7 @@ Post install script will run `grunt start` which will open app on `http://localh
 Mock API server will run on `http://localhost:3003`
 
 # Data
+-----------------------------------
 
 1. Initial data 
 
@@ -23,19 +25,24 @@ Initial data is retrieved from Mock API server. If server is not used, data is r
 
 2. Storing data
 
-Since there is no real server, data is stored in `HTML5 LocalStorage`. On page reload data from LocalStorage is used
+Since there is no real server, data is stored in `HTML5 LocalStorage`. On page reload data from LocalStorage is used.
+
+3. Server
+
+Node mock server is used as API server. You can change relevant responses on `http://localhost:3003`, eg 'post error'.
 
 HINT: Click logo to reset initial state.
 
 
+# Short intro:
+-----------------------------------
 
------------------------------------
-# 0. Tools list:
------------------------------------
 - HTML / HTML5
+	- W3C valid
 	- Semantic markup
 	- ARIA
 	- LocalStorage
+	- Accessible
 - JS / ES6
 	- Webpack
 	- Babel
@@ -50,14 +57,26 @@ HINT: Click logo to reset initial state.
 - SERVER / API
 	- browser-sync
 	- node-mock-server
+- BROWSERS / DEVICES
+	- Tested on IE9, Chrome, Firefox and Safari (latest), but it should work on any browser.
+	- Responsive
+	- Mobile first
+	- Retina ready	
+
+# Software
+-----------------------------------
+
+ - Chrome PixelPerfect plugin (PerfectPixel by WellDoneCode)
+ - Pixlr, PhotoShop CS2
+ - Sublime Text 3, IntelliJ
+ - NodeJS
 
 # Steps:
 
------------------------------------
-1. Initial setup:
+## 1. Initial setup:
 -----------------------------------
 
-## Directory structure
+- Directory structure
 
 ```
 - src/
@@ -67,56 +86,19 @@ HINT: Click logo to reset initial state.
  index.html
 ```
 
-## Entry js/scss files
+- Installing tools
+- Adding allowed plugins: jQuery
 
-```
-- js/
- main.js
-- scss/
- style.scss
- ```
-
-## Project init
- Creating `project.json`
-
-`npm init`
-
-## Installing tools
-
-- assets
-	- copy	
-- js
-	- Webpack
-	- Babel
-	- Uglify
-	- ESlint
-- sass	
-	- node-sass
-	- postcss
-	- autoprefixer
-	- cssnano
-- serve
-	- browser-sync
-	- watch
-- API
-	- node-mock-server	
-
-## Adding allowed plugins
-
-- jQuery
-
------------------------------------
-# 2. Configuration
+## 2. Configuration
 -----------------------------------
 
-- Webpack 
-	- entry/output
+- Webpack config
 	- Babel
 	- Uglify
-	- ESlint
+	- ESlint extending "standard" rules
 	- jQuery in separate bundle
 
-- Grunt
+- Grunt tasks
 	- Copy
 	- Sass
 	- Postcss
@@ -125,35 +107,29 @@ HINT: Click logo to reset initial state.
 	- Webpack
 	- Mock server
 
------------------------------------
-# 3. Application
+## 3. Application
 -----------------------------------
 
 - js
 	- main init
 	- modules
+	- helpers
+	- constants
 - scss
 	- partials
+	- mixins
 
------------------------------------
-# 4. Software
------------------------------------
- - Chrome PixelPerfect plugin (PerfectPixel by WellDoneCode)
- - Pixlr, PhotoShop CS2
- - Sublime Text 3, IntelliJ
-
------------------------------------
-# 5. Env
+## 4. Env
 -----------------------------------
  - Dev
  - Prod
 
- -----------------------------------
-# 6. Grunt tasks
+
+## 5. Grunt tasks
 -----------------------------------
  - `grunt build`
  - `grunt build:prod`
- - `grunt start` - build dev files and open server + watch, browsersync, mock api server
+ - `grunt start` - default: build dev files and open server + watch, browsersync, mock api server
  - `grunte start:prod` - build prod files and open server
 
 
